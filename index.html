@@ -162,6 +162,25 @@
     margin:12px 0 0;text-align:center;font-size:11.5px;color:var(--ink-faint);letter-spacing:.01em;
   }
 
+  /* ---------- 오시는 길 ---------- */
+  .directions{padding-block:32px;text-align:center;}
+  .directions h2{
+    margin:0 0 18px;font-family:'Noto Serif KR',serif;font-weight:500;font-size:16px;letter-spacing:.02em;
+  }
+  .dir-item{
+    border:1px solid var(--line);border-radius:3px;background:var(--paper-2);
+    padding:14px 16px;margin-bottom:10px;text-align:left;
+  }
+  .dir-item:last-child{margin-bottom:0;}
+  .dir-item .label{
+    margin:0 0 6px;font-size:12px;font-weight:500;letter-spacing:.08em;color:var(--gold);
+  }
+  .dir-item p.txt{margin:0;font-size:13.5px;line-height:1.85;color:var(--ink);}
+  .dir-item p.txt + p.txt{margin-top:4px;}
+  /* 복사 버튼이 있는 칸 — 왼쪽에 글, 오른쪽에 버튼 */
+  .dir-item.copyable{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:10px;}
+  .dir-item.copyable .label,.dir-item.copyable .txt{grid-column:1;}
+
   /* ---------- 마음 전하실 곳 ---------- */
   .accounts{padding-block:32px 8px;text-align:center;}
   .accounts h2{
@@ -307,6 +326,26 @@
       <button type="button" id="next" aria-label="다음 사진">&#8250;</button>
     </div>
     <p class="hint" id="hint">좌우로 밀어서 넘겨보세요</p>
+  </section>
+
+  <hr class="rule">
+
+  <section class="directions pad">
+    <h2>오시는 길</h2>
+    <div class="dir-item copyable">
+      <p class="label">주소</p>
+      <p class="txt">경기 안양시 동안구 벌말로 126 오비즈타워 35층</p>
+      <button type="button" class="copy" data-copy="경기 안양시 동안구 벌말로 126">복사</button>
+    </div>
+    <div class="dir-item">
+      <p class="label">주차</p>
+      <p class="txt">오비즈타워 지하주차장 전층 이용 가능</p>
+    </div>
+    <div class="dir-item">
+      <p class="label">대중교통</p>
+      <p class="txt">인덕원역 4번 출구에서 도보 15분</p>
+      <p class="txt">인덕원역 4번 출구에서 <b>22번</b> · <b>33번</b> 버스 이용</p>
+    </div>
   </section>
 
   <hr class="rule">
